@@ -1,30 +1,23 @@
 <!-- Footer -->
 <footer class="text-center">
-  <div class="footer-above">
-    <div class="container">
+  <div class="footer-above" style="padding-top: 200px; padding-bottom: 100px;">
+    <div class="container" style="color: black;">
       <div class="row">
         <div class="footer-col col-md-4">
-          <h3>{{ site.footer.location }}</h3>
-          <p>
-            {% for adress in site.address %}
-            {{ adress.line }} <br>
-            {% endfor %}
-          </p>
+          
         </div>
         <div class="footer-col col-md-4">
           <h3>{{ site.footer.social }}</h3>
-          <ul class="list-inline">
+          <ul class="list-inline" style="color: black;">
+            <a href="{{ site.email }}" target="_blank"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><i class="fa fa-envelope" style="font-size:16px; padding-right:25px; color:black;"></i></a></li>
             {% for network in site.social %}
-            <li>
-              <a href="{{ network.url }}" class="btn-social btn-outline"><i
+              <a href="{{ network.url }}" target="_blank" class="btn-social btn-outline" style="color: black;"><i
                   class="fa-brands fa-fw fa-{{ network.title }}"></i></a>
             </li>
             {% endfor %}
           </ul>
         </div>
         <div class="footer-col col-md-4">
-          <h3>{{ site.footer.credits }}</h3>
-          <p>{{ site.credits }}</p>
         </div>
       </div>
     </div>
